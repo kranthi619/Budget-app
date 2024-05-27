@@ -14,3 +14,5 @@ spec:
       value: 'budget-app'
     - name: docker-hub-username
       value: 'kranthi619'
+    - name: docker-hub-repo
+      value: 'kranthi619/budget-app' 
