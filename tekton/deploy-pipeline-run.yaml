@@ -7,10 +7,10 @@ spec:
     name: docker-build-and-push-pipeline
   params:
     - name: repo-url
-      value: 'https://github.com/krishnavamshi933/Budget-App.git'
+      value: 'https://github.com/kranthi619/Budget-app.git'
     - name: repo-revision
-      value: 'main'
+      value: 'master'
     - name: image-name
       value: 'budget-app'
     - name: docker-hub-username
-      value: 'krishnavamshi933'
+      value: 'kranthi619'
