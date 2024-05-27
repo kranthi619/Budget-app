@@ -5,21 +5,21 @@ default: &default
 
 development:
   <<: *default
-  database: Budgy_development
-  username: <%= ENV['DB_USERNAME'] %>
+  database: <%= ENV['DB_NAME'] %>
+  username: <%= ENV['DB_USER'] %>
   password: <%= ENV['DB_PASSWORD'] %>
   host: <%= ENV['DB_HOST'] %>
 
 test:
   <<: *default
   database: Budgy_test
-  username: <%= ENV['DB_USERNAME'] %>
+  username: <%= ENV['DB_USER'] %>
   password: <%= ENV['DB_PASSWORD'] %>
   host: <%= ENV['DB_HOST'] %>
 
 production:
   <<: *default
   database: Budgy_production
-  username: <%= ENV['DB_USERNAME'] %>
+  username: <%= ENV['DB_USER'] %>
   password: <%= ENV['DB_PASSWORD'] %>
   host: <%= ENV['DB_HOST'] %>
