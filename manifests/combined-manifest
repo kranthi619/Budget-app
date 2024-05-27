@@ -56,7 +56,7 @@ spec:
     spec:
       containers:
         - name: budget-app-web
-          image: krishnavamshi933/budget-app-web:latest
+          image: kranthi619/budget-app:latest
           ports:
             - containerPort: 3000
           env:
