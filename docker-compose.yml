@@ -17,4 +17,4 @@ services:
     environment:
       - POSTGRES_USER=Budgy
       - POSTGRES_PASSWORD=Budgy
-      - POSTGRES_DB=budgy_development
+      - POSTGRES_DB=${DB_NAME}
