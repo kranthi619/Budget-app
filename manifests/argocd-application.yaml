@@ -2,15 +2,16 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: budget-app
-  # Add other metadata fields as needed
+  namespace: argocd  # Ensure this is the namespace where ArgoCD is installed
 spec:
   destination:
-    # Add your cluster URL and namespace here
+    server: 'https://kubernetes.default.svc'
+    namespace: default  # Specify the target namespace for your application
   source:
-    repoURL: https://github.com/kranthi619/Budget-app.git
-    path: manifests/*  # This should be relative to the root of your repository
-    targetRevision: HEAD  # You can specify a specific revision if needed
-  project: default  # Specify the project name if you have one
+    repoURL: 'https://github.com/kranthi619/Budget-app.git'
+    path: manifests  # This should be the relative path to the manifests directory
+    targetRevision: HEAD  # You can specify a specific branch, tag, or commit
+  project: default  # Specify the ArgoCD project
   syncPolicy:
     automated:  # Adjust sync policy as per your requirement
       prune: true
