@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: budget-app
+  # Add other metadata fields as needed
+spec:
+  destination:
+    # Add your cluster URL and namespace here
+  source:
+    repoURL: https://github.com/kranthi619/Budget-app.git
+    path: manifests/*  # This should be relative to the root of your repository
+    targetRevision: HEAD  # You can specify a specific revision if needed
+  project: default  # Specify the project name if you have one
+  syncPolicy:
+    automated:  # Adjust sync policy as per your requirement
+      prune: true
+      selfHeal: true
